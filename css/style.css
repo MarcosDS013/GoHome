@@ -9814,7 +9814,7 @@ xclip
   padding: 15px 20px;
 }
 .popup-mobile-menu .inner .header-top .logo a img {
-  max-height: 45px;
+  max-height: 65px;
 }
 .popup-mobile-menu .inner .header-top .close-menu .close-button {
   background: var(--color-darker);

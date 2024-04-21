@@ -7,6 +7,19 @@
     <!-- 0 == light, 1 == dark -->
 
     <title>GoHome | Cuidando de você!</title>
+    <!-- Meta Tags -->
+    <link rel="canonical" href="https://gohomecare.com.br/" />
+
+    <meta
+      name="description"
+      content="Go Home | Cuidando de você"
+    />
+    <meta
+      name="keywords"
+      content="Go Home | Saúde, Cuidados Paliativos, Internação, Assistência, Emergência"
+    />
+    <meta name="author" content="mds_tech" />
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <!-- CSS ============================================ -->
@@ -22,17 +35,13 @@
   </head>
 
   <body>
-        <!-- LOAD SCREEN (Carregando da Página) + BUTTON Whatsapp -->
-        <div class="load-screen">
-          <img
-            src="images/loading.png"
-            alt="Loading Icon"
-            class="loading-icon"
-          />
+        <!-- LOAD SCREEN (Carregando da Página) -->
+        <div id="preloader">
+          <img src="images/loading.png" alt="Carregando página">
         </div>
         
         <style>
-          .load-screen {
+          #preloader {
             position: fixed;
             top: 0;
             left: 0;
@@ -43,14 +52,17 @@
             justify-content: center;
             align-items: center;
             z-index: 999;
-            transition: opacity 900ms ease-in-out; /* Modificado para alterar a opacidade */
+            transition: opacity 900ms ease-in-out;
           }
         
-          .loading-icon {
-            width: 10rem;
-            position: relative;
-            overflow: hidden;
-            animation: scaleup 0.4s linear infinite alternate;
+          #preloader img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; /* Ajuste conforme necessário */
+            height: 100px; /* Ajuste conforme necessário */
+            animation: scaleup 0.6s linear infinite alternate;
           }
         
           @keyframes scaleup {
@@ -64,23 +76,20 @@
         </style>
         
         <script>
-          const loadScreen = document.querySelector(".load-screen");
-          const logo = document.querySelector(".logo img");
-        
-          window.addEventListener("load", () => {
-            setTimeout(() => {
-              loadScreen.style.opacity = "0"; // Diminui a opacidade gradualmente
-        
+          const preloader = document.querySelector("#preloader");
+          if (preloader) {
+            window.addEventListener("load", () => {
               setTimeout(() => {
-                loadScreen.style.display = "none"; // Oculta a tela de carregamento
-                document.body.style.overflow = "visible";
-                document.body.style.paddingRight = "0px";
-              }, 900); // Tempo correspondente à transição de opacidade
-            }, 1800); // Tempo de exibição da tela de carregamento
-          });
+                preloader.style.opacity = "0";
+                setTimeout(() => {
+                  preloader.remove();
+                }, 900); // Tempo correspondente à transição de opacidade
+              }, 1800); // Tempo de exibição da tela de carregamento
+            });
+          }
         </script>
         
-        
+
         <!-- BUTTON Whatsapp -->
         <div class="pulse">
           <a href="#" target="_blank" title="Botão Whatsapp"><i class='bx bxl-whatsapp'></i></a>
