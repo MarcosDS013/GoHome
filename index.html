@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-style-mode" content="1" />
+    <meta name="theme-style-mode" content="0" />
     <!-- 0 == light, 1 == dark -->
 
     <title>GoHome | Cuidando de você!</title>
@@ -47,18 +47,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: black;
+            background: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 999;
+            z-index: 9999;
             transition: opacity 900ms ease-in-out;
           }
         
           #preloader img {
             position: fixed;
             top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
             width: 100px; /* Ajuste conforme necessário */
             height: 100px; /* Ajuste conforme necessário */
@@ -84,7 +83,7 @@
                 setTimeout(() => {
                   preloader.remove();
                 }, 900); // Tempo correspondente à transição de opacidade
-              }, 1800); // Tempo de exibição da tela de carregamento
+              }, 1300); // Tempo de exibição da tela de carregamento
             });
           }
         </script>
@@ -92,7 +91,8 @@
 
         <!-- BUTTON Whatsapp -->
         <div class="pulse">
-          <a href="#" target="_blank" title="Botão Whatsapp"><i class='bx bxl-whatsapp'></i></a>
+          <a href="https://api.whatsapp.com/send?phone=551333944083"
+                                          target="_blank" title="Botão Whatsapp"><i class='bx bxl-whatsapp'></i></a>
         </div>
         
         <style>
@@ -103,10 +103,10 @@
 
 .pulse {
   position: fixed;
-  bottom: 0;
+  bottom: 3.5%;
   left: 0;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   background: #004861;
   display: flex;
   opacity: 0.5;
@@ -115,6 +115,11 @@
   border-radius: 50%;
   z-index: 998;
   transition: 0.8s;
+}
+
+.pulse i {
+  margin-top: 10px;
+  font-size: 40px;
 }
 
 .pulse:hover {
@@ -175,11 +180,12 @@
                                 <div class="address-content">
                                     <p>
                                       <i class="bx bxl-whatsapp"></i>
-                                        <span><a href="#">Em casos de Emergência (13) 3394-4083 | 24h</a></span>
+                                        <span><a href="https://api.whatsapp.com/send?phone=551333944083"
+                                          target="_blank">Em casos de Emergência (13) 3394-4083 | 24h</a></span>
                                     </p>
                                     <p>
                                       <i class='bx bx-phone'></i>
-                                        <span><a href="#">Para todas outras finalidades 4000-2660 | 8:00-18:00</a></span>
+                                        <span><a href="#contact">Para todas outras finalidades 4000-2660 | 8:00-18:00</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -356,8 +362,7 @@
                 <div class="button-group mt--30">
                   <a
                     class="btn-default round btn-large"
-                    target="_blank"
-                    href="#"
+                    href="#pad"
                     >Saiba Mais Agora</a
                   >
                 </div>
@@ -530,6 +535,52 @@
       </div>
       <!-- End Seperator Area  -->
 
+      <!-- Start Split Style-1 Area  -->
+      <div class="rainbow-split-area">
+        <div class="wrapper">
+            <div class="rainbow-splite-style">
+                <div class="split-wrapper">
+                    <div class="row g-0 radius-10 align-items-center">
+                        <div class="col-lg-12 col-xl-6 col-12 order-xl-2">
+                            <div class="thumbnail">
+                                <img class="w-100" src="images/importancia-gohome.webp" alt="split Images">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 col-12 order-xl-1">
+                            <div class="split-inner">
+                                <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                                    Dê o suporte correto que <span class="text-cor1">seu familiar merece!</span> </h4>
+                                <ul class="split-list" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+                                    <li>- Atendimento Emergêncial 24 horas/dia;</li>
+                                    <li>- Plantão Técnico 24 horas/dia;</li>
+                                    <li>- Suporte Médico 24 horas/dia;</li>
+                                    <li>- Gerenciamento de Escala 24 horas/dia;</li>
+                                    <li>- Tipos de Desospitalizações Diversas;</li>
+                                    <li>- Cuidados Paliativos;</li>
+                                    <li>- Atendimento Pré-Hospitalar;</li>
+                                    <li>- Setor de Avaliações / Captações;</li>
+                                    <li>- Marcação / Encmaminhamento de Exames;</li>
+                                    <li>- Farmácia / Dispensário;</li>
+                                    <li>- Coleta de Lixo Domiciliar;</li>
+                                    <li>- Setor de Avaliações / Captações;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Split Style-1 Area  -->
+
+          <!-- Start Seperator Area  -->
+          <div class="rbt-separator-mid">
+            <div class="container">
+              <hr class="rbt-separator m-0" />
+            </div>
+          </div>
+          <!-- End Seperator Area  -->
+
         <!-- Start Split Style-1 Area  -->
         <div class="rainbow-split-area">
           <div class="wrapper">
@@ -541,15 +592,14 @@
                                   <img class="w-100 roda-mundo" src="images/mundo-girando.png" alt="split Images">
                               </div>
                           </div>
-                          <div id="about" class="col-lg-12 col-xl-6 col-12">
+                          <div class="col-lg-12 col-xl-6 col-12">
                               <div class="split-inner">
                                   <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
                                     A <span class="text-cor1">Go Home</span> vai até você!</h4>
-                                <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Nossa empresa atende em toda a Baixada Santista além, de todo Litoral (Sul e Norte), São Paulo capital e o ABC. Temos um emaranhado de profissionais aptos a lidar com todo tipo de atendimento e com isto efetuar uma desospitalização com eficiência e dedicação.
+                                <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Atualmente, no mundo todo, a desospitalização, ou seja, receber alta hospitalar, não é uma opção, mas sim uma necessidade para liberação de leitos para casos graves na rede de saúde, nestas horas que somos requisitados para tratarmos sobre tal ação, para casos que sejam pertinentes haver o cuidado domiciliar.<br><br>
+                                  Nossa empresa atende em toda a Baixada Santista além, de todo Litoral (Sul e Norte), São Paulo capital e o ABC. Temos um emaranhado de profissionais aptos a lidar com todo tipo de atendimento e com isto efetuar uma desospitalização com eficiência e dedicação.
                                   <br><br>
-                                  Garantimos um serviço de qualidade e humanizado, priorizando o estabelecimento de relações cordiais e benéficas entre todos os envolvidos no processo de atenção domiciliar.
-                                  <br><br>
-                                  Nascemos da ideia de criação de um atendimento e forma de trabalho que rompessem a barreira da mera assistência convencional, com corpo de diretores da empresa formado por profissionais experientes – alguns, com mais de 15 anos de experiência em home care. Valorizamos a transparência, honestidade e trabalho em equipe, comunicação aberta, o que nos permite construir relacionamentos duradouros.
+                                  Garantimos um serviço de qualidade e humanizado, priorizando o estabelecimento de relações cordiais e benéficas entre todos os envolvidos no processo de atenção domiciliar para haver um processo de desospitalização seguro e tranquilo.
                                 </p>
                                   <div class="view-more-button mt--35" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
                                       <a class="btn-default" href="#contact">Nos Contate</a>
@@ -567,14 +617,14 @@
       <div class="rainbow-split-area">
           <div class="wrapper">
               <div class="rainbow-splite-style bg-color-blackest">
-                  <div class="split-wrapper">
+                  <div id="about" class="split-wrapper">
                       <div class="row g-0 radius-10 align-items-center">
                           <div class="col-lg-12 col-xl-6 col-12 order-2 order-lg-1">
                               <div class="split-inner">
                                   <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
                                     <span class="text-cor1">Sempre prontos</span> para cuidar de quem mais precisa!</h4>
                                   <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                                    Atualmente, no mundo todo, a desospitalização, ou seja, receber alta hospitalar, não é uma opção, mas sim uma necessidade para liberação de leitos para casos graves na rede de saúde.<br><br>
+                                    Nascemos da ideia de criação de um atendimento e forma de trabalho que rompessem a barreira da mera assistência convencional, com corpo de diretores da empresa formado por profissionais experientes – alguns, com mais de 15 anos de experiência em home care. Valorizamos a transparência, honestidade e trabalho em equipe, comunicação aberta, o que nos permite construir relacionamentos duradouros.<br><br>
                                     O principal objetivo da GO HOME é garantir aos clientes e seus beneficiários um serviço de qualidade e humanizado, priorizando uma relação tranquila e benéfica a todas as partes envolvidas, sem deixar de lado a participação e envolvimento dos familiares no processo de atenção domiciliar.
                                   </p>
 
@@ -616,7 +666,18 @@
                           </div>
                           <div class="col-lg-12 col-xl-6 col-12 order-1 order-lg-2">
                               <div class="thumbnail">
-                                  <img class="w-100" src="images/sobre-cuidados.webp" alt="split Images">
+                                <div class="video-btn">
+                                  <div class="video-popup icon-center">
+                                      <div class="overlay-content">
+                                          <div class="thumbnail"><img class="radius-small" src="images/sobre-cuidados.webp" alt="Corporate Image"></div>
+                                          <div class="video-icon">
+                                              <a class="btn-default rounded-player popup-video" href="video/video-institucional.mp4">
+                                                  <span><i class='bx bx-play bx-burst' ></i></span>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="video-lightbox-wrapper"></div>
                               </div>
                           </div>
                       </div>
@@ -625,6 +686,100 @@
           </div>
       </div>
       <!-- End Split Style-4 Area  -->
+
+      <!-- Start Seperator Area  -->
+      <div class="rbt-separator-mid">
+        <div class="container">
+          <hr class="rbt-separator m-0" />
+        </div>
+      </div>
+      <!-- End Seperator Area  -->
+
+<!-- Start Timeline-Style-Four  -->
+<div class="rainbow-timeline-area rainbow-section-gap">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                  <h4 class="subtitle "><span class="theme-gradient">Nossos Valores</span></h4>
+                  <h2 class="title w-600 mb--20">O que pensamos sobre Home Care</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1 mt--50">
+              <div class="timeline-style-two bg-color-blackest">
+                  <div class="row row--0">
+                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
+                          <div class="rainbow-timeline">
+                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Missão</h6>
+                              <div class="progress-line">
+                                  <div class="line-inner"></div>
+                              </div>
+                              <div class="progress-dot">
+                                  <div class="dot-level">
+                                      <div class="dot-inner"></div>
+                                  </div>
+                              </div>
+                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Oferecer um atendimento humanizado e de qualidade aos seus pacientes, aliado uma boa gestão de recursos criando confiabildiade em seus clientes.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
+                          <div class="rainbow-timeline">
+                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Visão</h6>
+                              <div class="progress-line">
+                                  <div class="line-inner"></div>
+                              </div>
+                              <div class="progress-dot">
+                                  <div class="dot-level">
+                                      <div class="dot-inner"></div>
+                                  </div>
+                              </div>
+                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Consolidar-se como uma empresa de confiança e de referência em qualidade
+                                de nossas especialidades no segmento de home care.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
+                          <div class="rainbow-timeline">
+                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Atuação</h6>
+                              <div class="progress-line">
+                                  <div class="line-inner"></div>
+                              </div>
+                              <div class="progress-dot">
+                                  <div class="dot-level">
+                                      <div class="dot-inner"></div>
+                                  </div>
+                              </div>
+                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Atuar de forma ética e transparente, respeitando a individualidade de cada paciente e familiares, garantindo assim a qualidade dos serviços prestados.
+                              </p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
+                          <div class="rainbow-timeline">
+                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Valores</h6>
+                              <div class="progress-line">
+                                  <div class="line-inner"></div>
+                              </div>
+                              <div class="progress-dot">
+                                  <div class="dot-level">
+                                      <div class="dot-inner"></div>
+                                  </div>
+                              </div>
+                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Segurança do paciente<br>
+                              Humanização do atendimento<br>
+                              Respeito aos clientes<br>
+                              Valorização dos colaboradores<br>
+                              Educação continuada<br>
+                              Vigilância as boas práticas<br>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Timeline-Style-Four  -->
 
       <!-- Start Seperator Area  -->
       <div class="rbt-separator-mid">
@@ -683,8 +838,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
                                       <div class="section-title">
-                                        <h2 class="title">Veja no que isso ajuda o paciente.</h2>
-                                        <p>É o serviço voltado para pacientes com quadros clínicos complexos
+                                        <h2 class="title">Veja como tudo funciona.</h2>
+                                        <p>BAIXA COMPLEXIDADE – Até 06 horas;<br>
+                                          MÉDIA COMPLEXIDADE – Até 12 horas;<br>
+                                          ALTA COMPLEXIDADE – Até 24 horas;<br>
+                                          VENTILAÇÃO MECÂNICA.</p>
+                                        <p>Este é o serviço voltado para pacientes com quadros clínicos complexos
                                         e necessidade de vigilância e intervenções diárias, mas que
                                         não precisam de toda a estrutura hospitalar para seu
                                         tratamento. Nessa modalidade, levamos toda nossa assistência e
@@ -704,7 +863,14 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
                                       <div class="section-title">
-                                        <h2 class="title">O que acalma e conforta o paciente.</h2>
+                                        <h2 class="title">Assitência na Prática.</h2>
+                                        <p>Realização de Curativos;<br>
+                                          Antibioticoterapia domiciliar;<br>
+                                          Procedimentos especiais;<br>
+                                          Atendimento multidisciplinar;<br>
+                                          Monitoramento do paciente;<br>
+                                          Cuidados paliativos<br>
+                                          Oxigenioterapia.</p>
                                         <p>Nossa equipe de assistência fará um avaliação do paciente e o
                                           ambiente ao qual o mesmo vive, para solicitar e entrar com
                                           diversos recursos como equipamentos, materiais, medicamentos e
@@ -725,9 +891,8 @@
                                     <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
                                       <div class="section-title">
                                         <h2 class="title">O imprescindível para o paciente!</h2>
-                                        <p>Serviço que conta com nossa equipe de prontidão, aonde
-                                          contamos com completa infraestrutura, atendimento 24 horas,
-                                          equipamentos adequados e total expertise parasolicitações para
+                                        <p>Nestas horas que a experiência e estrutura faz toda diferença, é o nosso serviço que conta com nossa equipe de prontidão, aonde contamos com completa infraestrutura, atendimento 24 horas,
+                                          equipamentos adequados e total expertise para solicitar
                                           remoções de urgência, protocolos clínicos e equipe
                                           especializada no atendimento a casos clínicos complexos. Não
                                           importando idade, doença ou atual estado clínico do paciente,
@@ -754,44 +919,6 @@
               </div>
             </div>
             <!-- End Seperator Area  -->
-
-            <!-- Start Split Style-1 Area  -->
-            <div class="rainbow-split-area">
-              <div class="wrapper">
-                  <div class="rainbow-splite-style">
-                      <div class="split-wrapper">
-                          <div class="row g-0 radius-10 align-items-center">
-                              <div class="col-lg-12 col-xl-6 col-12 order-xl-2">
-                                  <div class="thumbnail">
-                                      <img class="w-100" src="images/importancia-gohome.webp" alt="split Images">
-                                  </div>
-                              </div>
-                              <div class="col-lg-12 col-xl-6 col-12 order-xl-1">
-                                  <div class="split-inner">
-                                      <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                                          Dê o suporte correto que <span class="text-cor1">seu familiar merece!</span> </h4>
-                                      <ul class="split-list" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                                          <li>- Atendimento Emergêncial 24 horas/dia;</li>
-                                          <li>- Plantão Técnico 24 horas/dia;</li>
-                                          <li>- Suporte Médico 24 horas/dia;</li>
-                                          <li>- Gerenciamento de Escala 24 horas/dia;</li>
-                                          <li>- Tipos de Desospitalizações Diversas;</li>
-                                          <li>- Cuidados Paliativos;</li>
-                                          <li>- Atendimento Pré-Hospitalar;</li>
-                                          <li>- Setor de Avaliações / Captações;</li>
-                                          <li>- Marcação / Encmaminhamento de Exames;</li>
-                                          <li>- Farmácia / Dispensário;</li>
-                                          <li>- Coleta de Lixo Domiciliar;</li>
-                                          <li>- Setor de Avaliações / Captações;</li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- End Split Style-1 Area  -->
 
                       <!-- Start Seperator Area  -->
                       <div class="rbt-separator-mid">
@@ -897,78 +1024,66 @@
                 data-sal-duration="700"
                 data-sal-delay="100"
               >
-                <h2 class="title w-600 mb--20">Deixe uma <span class="text-cor1">mensagem ou agende</span> uma visita</h2>
+                <h2 class="title w-600 mb--20">Nos contate <span class="text-cor1">em algum de nossos canais</span></h2>
                 <p class="description b1">
-                  <i class="feather-map-pin"></i> Av Senador Feijó 686 Conj.1518 | Vila Matias Santos SP.
+                  Obtenha maiores informações sobre nossos serviços e soluções para área da saúde.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row g-5">
-            <div class="col-lg-7">
-              <form
-                class="contact-form-1 rainbow-dynamic-form"
-                id="contact-form"
-                method="POST"
-                action="mail.php"
-              >
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="contact-name"
-                    id="contact-name"
-                    placeholder="Qual seu nome"
-                  />
+          <div class="row row--15">
+            <div class="col-lg-12">
+              <div class="rainbow-contact-address mt_dec--30">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <div class="rainbow-address">
+                      <div class="icon">
+                        <i class="feather-headphones"></i>
+                      </div>
+                      <div class="inner">
+                        <h4 class="title">Nosso Telefone</h4>
+                        <p><a href="#">4000-2660</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <div class="rainbow-address">
+                      <div class="icon">
+                        <i class="feather-mail"></i>
+                      </div>
+                      <div class="inner">
+                        <h4 class="title">Nosso Email</h4>
+                        <p>
+                          <a href="mailto:contato@gohomecare.com.br"
+                            >contato@gohomecare.com.br</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <div class="rainbow-address">
+                      <div class="icon">
+                        <i class="feather-map-pin"></i>
+                      </div>
+                      <div class="inner">
+                        <h4 class="title">Nossa Localização</h4>
+                        <p>
+                          Av Senador Feijó, 686 Conj.1518 <br />
+                          Vila Matias - Santos/SP
+                        </p>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rainbow-address">
+                    <div class="inner">
+                      <div class="google-map-style-1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.933137011181!2d-46.32743089747914!3d-23.95218953226978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03745d931789%3A0xe39d01e5e54271ad!2sAv.%20Senador%20Feij%C3%B3%2C%20686%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-504!5e0!3m2!1spt-PT!2sbr!4v1713924403239!5m2!1spt-PT!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="contact-phone"
-                    id="contact-phone"
-                    placeholder="Número de telefone"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    id="contact-email"
-                    name="contact-email"
-                    placeholder="Seu melhor email"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="Qual Assunto do Contato"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <textarea
-                    name="contact-message"
-                    id="contact-message"
-                    placeholder="Deixe sua mensagem aqui..."
-                  ></textarea>
-                </div>
-
-                <div class="form-group">
-                  <button
-                    name="submit"
-                    type="submit"
-                    id="submit"
-                    class="btn-default btn-large rainbow-btn round"
-                  >
-                    <span>Enviar</span>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="col-lg-5">
-              <div class="google-map-style-1">
-                <iframe title="Mapa de Localização" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.933137011181!2d-46.32743089747914!3d-23.95218953226978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03745d931789%3A0xe39d01e5e54271ad!2sAv.%20Senador%20Feij%C3%B3%2C%20686%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-504!5e0!3m2!1spt-PT!2sbr!4v1713622582692!5m2!1spt-PT!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>
           </div>
@@ -1033,19 +1148,15 @@
           <div class="row align-items-center">
             <div class="social-icon-wrapper">
               <ul class="social-icon social-default icon-naked">
-                  <li><a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                  <li><a href="https://www.facebook.com/gohomecaresaude/" target="_blank" title="Facebook">
                           <i class="feather-facebook"></i>
                       </a>
                   </li>
-                  <li><a href="https://www.twitter.com" target="_blank" title="Twitter">
-                          <i class="feather-twitter"></i>
-                      </a>
-                  </li>
-                  <li><a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                  <li><a href="https://www.instagram.com/gohomecaresaude/" target="_blank" title="Instagram">
                           <i class="feather-instagram"></i>
                       </a>
                   </li>
-                  <li><a href="https://www.linkedin.com/" target="_blank" title="Linkedin">
+                  <li><a href="https://www.linkedin.com/company/gohomecaresaude/" target="_blank" title="Linkedin">
                           <i class="feather-linkedin"></i>
                       </a>
                   </li>
@@ -1065,6 +1176,81 @@
         </div>
       </div>
       <!-- End Copy Right Area  -->
+
+      <script
+      src="https://formspree.io/js/formbutton-v1.min.js"
+      defer
+    ></script>
+    <script>
+      window.formbutton =
+        window.formbutton ||
+        function () {
+          (formbutton.q = formbutton.q || []).push(arguments);
+        };
+      formbutton("create", {
+        action: "https://formspree.io/f/xjvnjjqg",
+        title: "Deixe seu comentário ou agende uma visita!",
+        fields: [
+          {
+            type: "text",
+            label: "Nome:",
+            name: "name",
+          },
+          {
+            type: "email",
+            label: "Email:",
+            name: "email",
+          },
+          {
+            type: "text",
+            label: "Celular:",
+            name: "phone",
+          },
+          {
+            type: "textarea",
+            label: "Mensagem:",
+            name: "message",
+          },
+          { type: "submit", value: "Enviar" },
+        ],
+        styles: {
+          fontFamily: "Inter",
+          modal: {
+            border: "1px solid #004861",
+            boxShadow: "6px 6px 0 #004861",
+            borderRadius: "15",
+          },
+          title: {
+            padding: "24px 24px 0px 24px",
+            background: "rgba(0,0,0,0)",
+            color: "#56b847",
+            fontFamily: "Inter",
+            fontSize: "1.5em",
+          },
+          body: {
+            padding: "16px 24px 24px",
+          },
+          field: {
+            display: "flex",
+          },
+          submitField: {
+            justifyContent: "flex-end",
+          },
+          input: {
+            borderRight: "1px solid #004861",
+            borderBottom: "1px solid #004861",
+            borderRadius: "5px",
+          },
+          button: {
+            background: "#004861",
+            fill: "#56b847",
+          },
+          closeButton: {
+            textShadow: "0 0 0 #56b847",
+          },
+        },
+      });
+    </script>
     </main>
 
     <!-- All Scripts  -->
