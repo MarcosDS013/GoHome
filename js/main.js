@@ -358,7 +358,7 @@
       var scrollTop = $(".rainbow-back-top");
       $(window).scroll(function () {
         var topPos = $(this).scrollTop();
-        if (topPos > 7500) {
+        if (topPos > 5800) {
           $(scrollTop).css("opacity", "1");
         } else {
           $(scrollTop).css("opacity", "0");
