@@ -2,31 +2,26 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-style-mode" content="0" />
-    <!-- 0 == light, 1 == dark -->
-
     <title>GoHome | Cuidando de você!</title>
-    <!-- Meta Tags -->
     <link rel="canonical" href="https://gohomecare.com.br/" />
-
-    <meta
-      name="description"
-      content="Go Home | Cuidando de você"
-    />
+    <meta name="description" content="Go Home | Cuidando de você" />
     <meta
       name="keywords"
       content="Go Home | Saúde, Cuidados Paliativos, Internação, Assistência, Emergência"
     />
     <meta name="author" content="mds_tech" />
-
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
-    <!-- CSS ============================================ -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/feature.css" />
@@ -36,1251 +31,1548 @@
     <link rel="stylesheet" href="css/lightbox.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-        <!-- LOAD SCREEN (Carregando da Página) -->
-        <div id="preloader">
-          <img src="images/loading.png" alt="Carregando página">
-        </div>
-        
-        <style>
-          #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 900ms ease-in-out;
-          }
-        
-          #preloader img {
-            position: fixed;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100px; /* Ajuste conforme necessário */
-            height: 100px; /* Ajuste conforme necessário */
-            animation: scaleup 0.6s linear infinite alternate;
-          }
-        
-          @keyframes scaleup {
-            0% {
-              transform: scale(1);
-            }
-            100% {
-              transform: scale(1.1);
-            }
-          }
-        </style>
-        
-        <script>
-          const preloader = document.querySelector("#preloader");
-          if (preloader) {
-            window.addEventListener("load", () => {
-              setTimeout(() => {
-                preloader.style.opacity = "0";
-                setTimeout(() => {
-                  preloader.remove();
-                }, 900); // Tempo correspondente à transição de opacidade
-              }, 1300); // Tempo de exibição da tela de carregamento
-            });
-          }
-        </script>
-        
-
-    <!-- ====================== WHATSAPP ======================= -->
-
+    <div id="preloader">
+      <img src="images/loading.png" alt="Carregando página" />
+    </div>
+    <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.9s ease-in-out;
+      }
+      #preloader img {
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        animation: scaleup 0.6s linear infinite alternate;
+      }
+      @keyframes scaleup {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+    <script>
+      const preloader = document.querySelector("#preloader");
+      if (preloader) {
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+              preloader.remove();
+            }, 900); // Tempo correspondente à transição de opacidade
+          }, 1300); // Tempo de exibição da tela de carregamento
+        });
+      }
+    </script>
     <div id="whats">
       <a href="https://api.whatsapp.com/send?phone=551333944083" target="_blank"
         ><span></span><i class="bx bxl-whatsapp"></i
       ></a>
       <div class="pn-hover">Fale Agora</div>
     </div>
-        
-        <style>
-#whats {
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  z-index: 900;
-}
-
-#whats a {
-  color: #56b847;
-  z-index: 1001;
-  position: absolute;
-  opacity: 0.6;
-  border-radius: 60px;
-  -moz-border-radius: 60px;
-  -webkit-border-radius: 60px;
-  background: #004861;
-  display: block;
-  font-size: 24px;
-  font-weight: bold;
-  width: 60px;
-  height: 60px;
-  padding: 17px;
-  text-decoration: none;
-  transition: all 1s ease;
-}
-
-#whats a:hover {
-  opacity: 1;
-}
-
-#whats i {
-  font-size: 4rem;
-  margin: 13px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  animation: shadow-pulse 2s linear infinite;
-}
-
-@keyframes shadow-pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(120, 169, 56, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(120, 169, 56, 0);
-  }
-}
-
-#whats a span {
-  font-size: 14px;
-  font-weight: 500;
-  left: 8px;
-  position: absolute;
-  top: 18px;
-  width: 100px;
-}
-
-#whats .pn-hover {
-  position: absolute;
-  font-weight: bold;
-  font-size: 16px;
-  background: #56b847;
-  color: #004861 ;
-  width: 120px;
-  padding: 10px;
-  padding-left: 20px;
-  text-align: center;
-  top: 8px;
-  border-radius: 5px;
-  left: 30px;
-  opacity: 0;
-}
-
-#whats:hover .pn-hover {
-  opacity: 1;
-  left: 40px;
-}
-        </style>
-
-        <!-- =============================================
-        ==================================================
-        ============================================== -->
-        
+    <style>
+      #whats {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        z-index: 900;
+      }
+      #whats a {
+        color: #56b847;
+        z-index: 1001;
+        position: absolute;
+        opacity: 0.6;
+        border-radius: 60px;
+        -moz-border-radius: 60px;
+        -webkit-border-radius: 60px;
+        background: #004861;
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        width: 60px;
+        height: 60px;
+        padding: 17px;
+        text-decoration: none;
+        transition: all 1s ease;
+      }
+      #whats a:hover {
+        opacity: 1;
+      }
+      #whats i {
+        font-size: 4rem;
+        margin: 13px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        animation: shadow-pulse 2s linear infinite;
+      }
+      @keyframes shadow-pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(120, 169, 56, 0.2);
+        }
+        100% {
+          box-shadow: 0 0 0 20px rgba(120, 169, 56, 0);
+        }
+      }
+      #whats a span {
+        font-size: 14px;
+        font-weight: 500;
+        left: 8px;
+        position: absolute;
+        top: 18px;
+        width: 100px;
+      }
+      #whats .pn-hover {
+        position: absolute;
+        font-weight: 700;
+        font-size: 16px;
+        background: #56b847;
+        color: #004861;
+        width: 120px;
+        padding: 10px;
+        padding-left: 20px;
+        text-align: center;
+        top: 8px;
+        border-radius: 5px;
+        left: 30px;
+        opacity: 0;
+      }
+      #whats:hover .pn-hover {
+        opacity: 1;
+        left: 40px;
+      }
+    </style>
     <main class="page-wrapper">
-        <div class="header-transparent-with-topbar">
-            <div class="header-top-bar">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12 col-12">
-                            <div class="header-left">
-                                <p><a href="#">Nos acione através de nossos contatos
-                                  <i class="bx bx-right-arrow-alt bx-fade-left"></i>
-                                    </a></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-12 col-12">
-                            <div class="header-right">
-                                <div class="address-content">
-                                    <p>
-                                      <i class="bx bxl-whatsapp"></i>
-                                        <span><a href="https://api.whatsapp.com/send?phone=551333944083"
-                                          target="_blank">Em casos de Emergência (13) 3394-4083 | 24h</a></span>
-                                    </p>
-                                    <p>
-                                      <i class='bx bx-phone'></i>
-                                        <span><a href="#contact">Para todas outras finalidades 4000-2660 | 8:00-18:00</a></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="header-transparent-with-topbar">
+        <div class="header-top-bar">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-4 col-md-12 col-12">
+                <div class="header-left">
+                  <p>
+                    <a href="#"
+                      >Nos acione através de nossos contatos
+                      <i class="bx bx-right-arrow-alt bx-fade-left"></i
+                    ></a>
+                  </p>
                 </div>
-            </div>
-      <!-- Start Header Area  -->
-      <header
-        class="rainbow-header header-default header-transparent header-center-align header-sticky"
-      >
-        <div class="container position-relative">
-          <div class="row align-items-center">
-            <div class="col-lg-2 col-md-6 col-6">
-              <div class="header-left d-flex">
-                <div class="logo">
-                  <a href="index.html">
-                    <img class="logo-light" src="images/logo.png" alt="Corporate Logo" style="max-width: 250px;" />
-                    <img class="logo-dark" src="images/logo-dark.png" alt="Corporate Logo" style="max-width: 250px;" />
-                </a>
-                  </a>
+              </div>
+              <div class="col-lg-8 col-md-12 col-12">
+                <div class="header-right">
+                  <div class="address-content">
+                    <p>
+                      <i class="bx bxl-whatsapp"></i>
+                      <span
+                        ><a
+                          href="https://api.whatsapp.com/send?phone=551333944083"
+                          target="_blank"
+                          >Em casos de Emergência (13) 3394-4083 | 24h</a
+                        ></span
+                      >
+                    </p>
+                    <p>
+                      <i class="bx bx-phone"></i>
+                      <span
+                        ><a href="#contact"
+                          >Para todas outras finalidades 4000-2660 |
+                          8:00-18:00</a
+                        ></span
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-lg-8 position-static d-none d-lg-block">
-              <nav class="mainmenu-nav onepagenav">
-                <ul class="mainmenu justify-content-center">
-                  <li class="current"><a href="#home">Inicío</a></li>
-                  <li><a href="#service">Serviços</a></li>
-                  <li><a href="#about">Quem Somos</a></li>
-                  <li><a href="#pad">Nosso PAD</a></li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class="col-lg-2 col-md-6 col-6">
-              <div class="header-right">
-                <div class="header-btn d-none d-xl-block">
-                  <a
-                    class="btn-default btn-small round"
-                    href="#contact"
-                    >CONTATO</a
-                  >
-                </div>
-
-                <!-- Start Mobile-Menu-Bar -->
-                <div class="mobile-menu-bar ml--5 d-block d-lg-none">
-                  <div class="hamberger">
-                    <button class="hamberger-button" title="Menu">
-                      <i class="feather-menu"></i>
-                    </button>
+          </div>
+        </div>
+        <header
+          class="rainbow-header header-default header-transparent header-center-align header-sticky"
+        >
+          <div class="container position-relative">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-6 col-6">
+                <div class="header-left d-flex">
+                  <div class="logo">
+                    <a href="index.html"
+                      ><img
+                        class="logo-light"
+                        src="images/logo.png"
+                        alt="Corporate Logo"
+                        style="max-width: 250px" />
+                      <img
+                        class="logo-dark"
+                        src="images/logo-dark.png"
+                        alt="Corporate Logo"
+                        style="max-width: 250px"
+                    /></a>
                   </div>
                 </div>
-                <!-- Start Mobile-Menu-Bar -->
-
-                <!-- Start Switcher Area  -->
-                <div id="my_switcher" class="my_switcher">
-                  <ul>
+              </div>
+              <div class="col-lg-8 position-static d-none d-lg-block">
+                <nav class="mainmenu-nav onepagenav">
+                  <ul class="mainmenu justify-content-center">
+                    <li class="current"><a href="#home">Inicío</a></li>
+                    <li><a href="#service">Serviços</a></li>
+                    <li><a href="#about">Quem Somos</a></li>
+                    <li><a href="#pad">Nosso PAD</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg-2 col-md-6 col-6">
+                <div class="header-right">
+                  <div class="header-btn d-none d-xl-block">
+                    <a class="btn-default btn-small round" href="#contact"
+                      >CONTATO</a
+                    >
+                  </div>
+                  <div class="mobile-menu-bar ml--5 d-block d-lg-none">
+                    <div class="hamberger">
+                      <button class="hamberger-button" title="Menu">
+                        <i class="feather-menu"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div id="my_switcher" class="my_switcher">
+                    <ul>
+                      <li>
+                        <a
+                          href="javascript: void(0);"
+                          data-theme="light"
+                          class="setColor light"
+                          ><img
+                            class="sun-image"
+                            src="images/sun-01.svg"
+                            alt="Sun images"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript: void(0);"
+                          data-theme="dark"
+                          class="setColor dark"
+                          ><img
+                            class="Victor Image"
+                            src="images/vector.svg"
+                            alt="Vector Images"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="popup-mobile-menu">
+          <div class="inner">
+            <div class="header-top">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    class="logo-light"
+                    src="images/logo.png"
+                    alt="Corporate Logo" />
+                  <img
+                    class="logo-dark"
+                    src="images/logo-dark.png"
+                    alt="Corporate Logo"
+                /></a>
+              </div>
+              <div class="close-menu">
+                <button class="close-button"><i class="feather-x"></i></button>
+              </div>
+            </div>
+            <ul class="mainmenu onepagenav">
+              <li class="current"><a href="#home">Inicío</a></li>
+              <li><a href="#service">Serviços</a></li>
+              <li><a href="#about">Quem Somos</a></li>
+              <li><a href="#pad">Nosso PAD</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="rainbow-gradient-circle"></div>
+          <div class="rainbow-gradient-circle theme-pink"></div>
+        </div>
+        <div class="rbt-separator-mid">
+          <div class="container"><hr class="rbt-separator m-0" /></div>
+        </div>
+        <div
+          class="slider-area slider-style-1 variation-default bg_image bg_image--23 height-950 d-flex align-items-center"
+          id="home"
+          data-black-overlay="7"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-12">
+                <div class="inner text-center">
+                  <h1 class="title display-one">
+                    Somos Experts em<br />
+                    <div></div>
+                    <span class="header-caption"
+                      ><span class="cd-headline clip is-full-width"
+                        ><span class="cd-words-wrapper"
+                          ><b class="is-visible theme-gradient"
+                            >Internação Domiciliar</b
+                          >
+                          <b class="is-hidden theme-gradient"
+                            >Assistência Domiciliar</b
+                          >
+                          <b class="is-hidden theme-gradient"
+                            >Emergências Médicas</b
+                          ></span
+                        ></span
+                      ></span
+                    >
+                  </h1>
+                  <p class="description">
+                    Fazemos a transição Hospital/Casa de pacientes afim dos
+                    mesmos finalizarem seus tratamentos de saúde no conforto e
+                    segurança de sua residência.
+                  </p>
+                  <div class="button-group mt--30">
+                    <a class="btn-default round btn-large" href="#pad"
+                      >Saiba Mais Agora</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="service" class="rainbow-service-area rainbow-section-gap">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div
+                  class="section-title text-center"
+                  data-sal="slide-up"
+                  data-sal-duration="700"
+                  data-sal-delay="100"
+                >
+                  <h2 class="title w-600 mb--20">
+                    Veja alguns de nossos
+                    <span class="text-cor1">Serviços.</span>
+                  </h2>
+                  <p class="description b1">
+                    Adequamos nossos serviços de acordo com a necessidade de
+                    cada paciente.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row g-5">
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img
+                      src="images/exames-icone.png"
+                      title="Exame em Domicílio"
+                    />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600">
+                      <a href="#">Exame em Domicílio</a>
+                    </h4>
+                    <p class="description b1 color-gray mb--0">
+                      Oferecemos uma maior comodidade e conforto na realização
+                      de exames em domicílio. Nós vamos até a residência ou
+                      lugar combinado e efetuamos Eletrocardiograma, Raio-X
+                      Digital, entre outros.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img
+                      src="images/tecnico-enf-icone.png"
+                      title="Técnico em Enfermagem"
+                    />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600">
+                      <a href="#">Técnico em Enfermagem</a>
+                    </h4>
+                    <p class="description b1 color-gray mb--0">
+                      Profissionais indicados para pacientes de média gravidade
+                      que necessitam de cuidados especiais e procedimentos
+                      médicos de baixa complexidade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img src="images/medico-icone.png" title="Suporte Médico" />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">Suporte Médico</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      Consultas médicas domiciliares personalizadas, com
+                      profissionais generalistas que possuem especialização em
+                      Clínica Geral ou em Saúde da Família, e que atuam com
+                      qualquer tipo de idade e doença.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img src="images/enfermeiro-icone.png" title="Enfermeiro" />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">Enfermeiro</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      Profissional que efetua a supervisão de equipe ou de
+                      realização de procedimentos de maior complexidade.
+                      Fundamental na recuperação do paciente, pois é o
+                      enfermeiro que direciona a equipe, organiza estoque leito
+                      e acompanha diariamente caso a caso.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img
+                      src="images/fisioterapia-icone.png"
+                      title="Fisioterapeuta"
+                    />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">Fisioterapeuta</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      Muito solicitado para diagnosticos, previne e trata os
+                      distúrbios da cinesia humana decorrentes de alterações de
+                      órgãos e sistemas humanos: Disfunções do sistema motor,
+                      nervoso, cardíaco e respiratório, efetua diversos
+                      procedimentos na residência do paciente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <img src="images/nutri-icone.png" title="Nutricionista" />
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">Nutricionista</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      Sempre bem vindo nas residências, avalia a condição
+                      nutricional e ainda, orienta a forma correta de higienizar
+                      e preparar os alimentos para manter os nutrientes. Também
+                      elabora cardápios balanceados que atendam as necessidades
+                      específicas para a reabilitação e saúde do paciente, além
+                      de indicação da melhor dieta enterral.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon"><i class="feather-refresh-cw"></i></div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">Ciclo Vitorioso</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      A "engrenagem" sempre em movimento, focamos na educação
+                      continuada de nossos colaboradores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon"><i class="feather-lock"></i></div>
+                  <div class="content">
+                    <h4 class="title w-600">
+                      <a href="#">Segurança Garantida</a>
+                    </h4>
+                    <p class="description b1 color-gray mb--0">
+                      Asseguramos um atendimento ininterrupto enquanto paciente
+                      sobre nossos cuidados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
+                <div
+                  class="service service__style--1 bg-color-blackest radius text-center rbt-border"
+                >
+                  <div class="icon">
+                    <i class="feather-more-horizontal"></i>
+                  </div>
+                  <div class="content">
+                    <h4 class="title w-600"><a href="#">E muito mais</a></h4>
+                    <p class="description b1 color-gray mb--0">
+                      Accesso a tudo que a empresa tem a oferecer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rbt-separator-mid">
+          <div class="container"><hr class="rbt-separator m-0" /></div>
+        </div>
+        <div class="rainbow-split-area">
+          <div class="wrapper">
+            <div class="rainbow-splite-style">
+              <div class="split-wrapper">
+                <div class="row g-0 radius-10 align-items-center">
+                  <div class="col-lg-12 col-xl-6 col-12 order-xl-2">
+                    <div class="thumbnail">
+                      <img
+                        class="w-100"
+                        src="images/importancia-gohome.webp"
+                        alt="split Images"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6 col-12 order-xl-1">
+                    <div class="split-inner">
+                      <h4
+                        class="title"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="100"
+                      >
+                        Dê o suporte correto que
+                        <span class="text-cor1">seu familiar merece!</span>
+                      </h4>
+                      <ul
+                        class="split-list"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="300"
+                      >
+                        <li>- Atendimento Emergêncial 24 horas/dia;</li>
+                        <li>- Plantão Técnico 24 horas/dia;</li>
+                        <li>- Suporte Médico 24 horas/dia;</li>
+                        <li>- Gerenciamento de Escala 24 horas/dia;</li>
+                        <li>- Tipos de Desospitalizações Diversas;</li>
+                        <li>- Cuidados Paliativos;</li>
+                        <li>- Atendimento Pré-Hospitalar;</li>
+                        <li>- Setor de Avaliações / Captações;</li>
+                        <li>- Marcação / Encmaminhamento de Exames;</li>
+                        <li>- Farmácia / Dispensário;</li>
+                        <li>- Coleta de Lixo Domiciliar;</li>
+                        <li>- Setor de Avaliações / Captações;</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rbt-separator-mid">
+          <div class="container"><hr class="rbt-separator m-0" /></div>
+        </div>
+        <div class="rainbow-split-area">
+          <div class="wrapper">
+            <div class="rainbow-splite-style">
+              <div class="split-wrapper">
+                <div class="row g-0 radius-10 align-items-center">
+                  <div class="col-lg-12 col-xl-6 col-12">
+                    <div class="thumbnail">
+                      <img
+                        class="w-100 roda-mundo"
+                        src="images/mundo-girando.png"
+                        alt="split Images"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6 col-12">
+                    <div class="split-inner">
+                      <h4
+                        class="title"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="100"
+                      >
+                        A <span class="text-cor1">Go Home</span> vai até você!
+                      </h4>
+                      <p
+                        class="description"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="200"
+                      >
+                        Atualmente, no mundo todo, a desospitalização, ou seja,
+                        receber alta hospitalar, não é uma opção, mas sim uma
+                        necessidade para liberação de leitos para casos graves
+                        na rede de saúde, nestas horas que somos requisitados
+                        para tratarmos sobre tal ação, para casos que sejam
+                        pertinentes haver o cuidado domiciliar.<br /><br />Nossa
+                        empresa atende em toda a Baixada Santista além, de todo
+                        Litoral (Sul e Norte), São Paulo capital e o ABC. Temos
+                        um emaranhado de profissionais aptos a lidar com todo
+                        tipo de atendimento e com isto efetuar uma
+                        desospitalização com eficiência e dedicação.<br /><br />Garantimos
+                        um serviço de qualidade e humanizado, priorizando o
+                        estabelecimento de relações cordiais e benéficas entre
+                        todos os envolvidos no processo de atenção domiciliar
+                        para haver um processo de desospitalização seguro e
+                        tranquilo.
+                      </p>
+                      <div
+                        class="view-more-button mt--35"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="400"
+                      >
+                        <a class="btn-default" href="#contact">Nos Contate</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rainbow-split-area">
+          <div class="wrapper">
+            <div class="rainbow-splite-style bg-color-blackest">
+              <div id="about" class="split-wrapper">
+                <div class="row g-0 radius-10 align-items-center">
+                  <div class="col-lg-12 col-xl-6 col-12 order-2 order-lg-1">
+                    <div class="split-inner">
+                      <h4
+                        class="title"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="200"
+                      >
+                        <span class="text-cor1">Sempre prontos</span> para
+                        cuidar de quem mais precisa!
+                      </h4>
+                      <p
+                        class="description"
+                        data-sal="slide-up"
+                        data-sal-duration="700"
+                        data-sal-delay="300"
+                      >
+                        Nascemos da ideia de criação de um atendimento e forma
+                        de trabalho que rompessem a barreira da mera assistência
+                        convencional, com corpo de diretores da empresa formado
+                        por profissionais experientes – alguns, com mais de 15
+                        anos de experiência em home care. Valorizamos a
+                        transparência, honestidade e trabalho em equipe,
+                        comunicação aberta, o que nos permite construir
+                        relacionamentos duradouros.<br /><br />O principal
+                        objetivo da GO HOME é garantir aos clientes e seus
+                        beneficiários um serviço de qualidade e humanizado,
+                        priorizando uma relação tranquila e benéfica a todas as
+                        partes envolvidas, sem deixar de lado a participação e
+                        envolvimento dos familiares no processo de atenção
+                        domiciliar.
+                      </p>
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div class="count-box counter-style-4 text-left">
+                            <div>
+                              <div class="count-number">
+                                <span class="counter">300</span>
+                              </div>
+                            </div>
+                            <h5 class="counter-title">
+                              Pacientes já Atendidos.
+                            </h5>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div class="count-box counter-style-4 text-left">
+                            <div>
+                              <div class="count-number">
+                                <span class="counter">200</span>
+                              </div>
+                            </div>
+                            <h5 class="counter-title">
+                              Colaboradores Atuando Diariamente.
+                            </h5>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div class="count-box counter-style-4 text-left">
+                            <div>
+                              <div class="count-number">
+                                <span class="counter">100</span>
+                              </div>
+                            </div>
+                            <h5 class="counter-title">
+                              Procedimentos Diários.
+                            </h5>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div class="count-box counter-style-4 text-left">
+                            <div>
+                              <div class="count-number">
+                                <span class="counter">15</span>
+                              </div>
+                            </div>
+                            <h5 class="counter-title">
+                              Anos de Experiência da Diretoria.
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-xl-6 col-12 order-1 order-lg-2">
+                    <div class="thumbnail">
+                      <div class="video-btn">
+                        <div class="video-popup icon-center">
+                          <div class="overlay-content">
+                            <div class="thumbnail">
+                              <img
+                                class="radius-small"
+                                src="images/sobre-cuidados.webp"
+                                alt="Corporate Image"
+                              />
+                            </div>
+                            <div class="video-icon">
+                              <a
+                                class="btn-default rounded-player popup-video"
+                                href="video/video-institucional.mp4"
+                                ><span><i class="bx bx-play bx-burst"></i></span
+                              ></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="video-lightbox-wrapper"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rbt-separator-mid">
+            <div class="container"><hr class="rbt-separator m-0" /></div>
+          </div>
+          <div class="rainbow-timeline-area rainbow-section-gap">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div
+                    class="section-title text-center"
+                    data-sal="slide-up"
+                    data-sal-duration="700"
+                    data-sal-delay="100"
+                  >
+                    <h4 class="subtitle">
+                      <span class="theme-gradient">Nossos Valores</span>
+                    </h4>
+                    <h2 class="title w-600 mb--20">
+                      O que pensamos sobre Home Care
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1 mt--50">
+                  <div class="timeline-style-two bg-color-blackest">
+                    <div class="row row--0">
+                      <div
+                        class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient"
+                      >
+                        <div class="rainbow-timeline">
+                          <h6
+                            class="title"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="200"
+                          >
+                            Missão
+                          </h6>
+                          <div class="progress-line">
+                            <div class="line-inner"></div>
+                          </div>
+                          <div class="progress-dot">
+                            <div class="dot-level">
+                              <div class="dot-inner"></div>
+                            </div>
+                          </div>
+                          <p
+                            class="description"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="300"
+                          >
+                            Oferecer um atendimento de excelência aos seus
+                            pacientes, aliado uma boa gestão de recursos
+                            empregados, criando confiabildiade em seus clientes.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient"
+                      >
+                        <div class="rainbow-timeline">
+                          <h6
+                            class="title"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="200"
+                          >
+                            Visão
+                          </h6>
+                          <div class="progress-line">
+                            <div class="line-inner"></div>
+                          </div>
+                          <div class="progress-dot">
+                            <div class="dot-level">
+                              <div class="dot-inner"></div>
+                            </div>
+                          </div>
+                          <p
+                            class="description"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="300"
+                          >
+                            Consolidar-se como uma empresa de confiança e de
+                            referência em qualidade de nossas especialidades no
+                            segmento de home care.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient"
+                      >
+                        <div class="rainbow-timeline">
+                          <h6
+                            class="title"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="200"
+                          >
+                            Atuação
+                          </h6>
+                          <div class="progress-line">
+                            <div class="line-inner"></div>
+                          </div>
+                          <div class="progress-dot">
+                            <div class="dot-level">
+                              <div class="dot-inner"></div>
+                            </div>
+                          </div>
+                          <p
+                            class="description"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="300"
+                          >
+                            Atuar de forma ética e transparente, respeitando a
+                            individualidade de cada paciente e familiares,
+                            garantindo assim a qualidade dos serviços prestados.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient"
+                      >
+                        <div class="rainbow-timeline">
+                          <h6
+                            class="title"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="200"
+                          >
+                            Valores
+                          </h6>
+                          <div class="progress-line">
+                            <div class="line-inner"></div>
+                          </div>
+                          <div class="progress-dot">
+                            <div class="dot-level">
+                              <div class="dot-inner"></div>
+                            </div>
+                          </div>
+                          <p
+                            class="description"
+                            data-sal="slide-up"
+                            data-sal-duration="700"
+                            data-sal-delay="300"
+                          >
+                            Segurança do paciente<br />Humanização do
+                            atendimento<br />Respeito aos clientes<br />Valorização
+                            dos colaboradores<br />Educação continuada<br />Vigilância
+                            as boas práticas<br />
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rbt-separator-mid">
+            <div class="container"><hr class="rbt-separator m-0" /></div>
+          </div>
+          <div class="rainbow-tab-area rainbow-section-gap">
+            <div class="container">
+              <div class="row mb--40">
+                <div class="col-lg-12">
+                  <div
+                    id="pad"
+                    class="section-title text-center"
+                    data-sal="slide-up"
+                    data-sal-duration="700"
+                    data-sal-delay="100"
+                  >
+                    <h4 class="subtitle">
+                      <span class="theme-gradient">Os Pilares de um PAD</span>
+                    </h4>
+                    <h2 class="title w-600 mb--20">
+                      PAD (Programa de Atenção Domiciliar)
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <style>
+                #nav-tab1.nav-item.nav-link.active h5 {
+                  color: #56b847;
+                }
+                #nav-tab2.nav-item.nav-link.active h5 {
+                  color: #56b847;
+                }
+                #nav-tab3.nav-item.nav-link.active h5 {
+                  color: #56b847;
+                }
+              </style>
+              <section class="position-relative overflow-hidden">
+                <div class="container z-index-1">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="tab style-2">
+                        <nav>
+                          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a
+                              class="nav-item nav-link active"
+                              id="nav-tab1"
+                              data-bs-toggle="tab"
+                              href="#tab1-1"
+                              role="tab"
+                              aria-selected="true"
+                              ><h5>Internação Domiciliar</h5></a
+                            ><a
+                              class="nav-item nav-link"
+                              id="nav-tab2"
+                              data-bs-toggle="tab"
+                              href="#tab1-2"
+                              role="tab"
+                              aria-selected="false"
+                              ><h5>Assistência Domiciliar</h5></a
+                            ><a
+                              class="nav-item nav-link"
+                              id="nav-tab3"
+                              data-bs-toggle="tab"
+                              href="#tab1-3"
+                              role="tab"
+                              aria-selected="false"
+                              ><h5>Emergências Médicas</h5></a
+                            >
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div
+                            role="tabpanel"
+                            class="tab-pane fade show active"
+                            id="tab1-1"
+                          >
+                            <div class="row align-items-center">
+                              <div class="col-lg-6 col-md-12">
+                                <img
+                                  src="images/slide1.webp"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
+                                <div class="section-title">
+                                  <h2 class="title">
+                                    Veja como tudo funciona.
+                                  </h2>
+                                  <p>
+                                    BAIXA COMPLEXIDADE – Até 06 horas;<br />MÉDIA
+                                    COMPLEXIDADE – Até 12 horas;<br />ALTA
+                                    COMPLEXIDADE – Até 24 horas;<br />VENTILAÇÃO
+                                    MECÂNICA.
+                                  </p>
+                                  <p>
+                                    Este é o serviço voltado para pacientes com
+                                    quadros clínicos complexos e necessidade de
+                                    vigilância e intervenções diárias, mas que
+                                    não precisam de toda a estrutura hospitalar
+                                    para seu tratamento. Nessa modalidade,
+                                    levamos toda nossa assistência e mobilizamos
+                                    uma "base de operações" na residência para
+                                    atender as necessidades clínicas do
+                                    paciente, isso faz com que o mesmo tenha
+                                    total condições de melhoria, visando a
+                                    qualidade de vida e controle de sintomas.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            role="tabpanel"
+                            class="tab-pane fade"
+                            id="tab1-2"
+                          >
+                            <div class="row align-items-center">
+                              <div class="col-lg-6 col-md-12">
+                                <img
+                                  class="img-fluid"
+                                  src="images/slide2.webp"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
+                                <div class="section-title">
+                                  <h2 class="title">Assitência na Prática.</h2>
+                                  <p>
+                                    Realização de Curativos;<br />Antibioticoterapia
+                                    domiciliar;<br />Procedimentos especiais;<br />Atendimento
+                                    multidisciplinar;<br />Monitoramento do
+                                    paciente;<br />Cuidados paliativos<br />Oxigenioterapia.
+                                  </p>
+                                  <p>
+                                    Nossa equipe de assistência fará um
+                                    avaliação do paciente e o ambiente ao qual o
+                                    mesmo vive, para solicitar e entrar com
+                                    diversos recursos como equipamentos,
+                                    materiais, medicamentos e equipe
+                                    multiprofissional capacitada, para atender
+                                    as necessidades clínicas deste paciente.
+                                    Dentre isso ainda haverá modalidades de
+                                    assistência que se assemelham às consultas e
+                                    procedimentos realizados em ambulatórios.
+                                    Isto tudo visando o curto, médio e longo
+                                    prazo para uma melhoria continuada do
+                                    paciente.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            role="tabpanel"
+                            class="tab-pane fade"
+                            id="tab1-3"
+                          >
+                            <div class="row align-items-center">
+                              <div class="col-lg-6 col-md-12">
+                                <img
+                                  class="img-fluid"
+                                  src="images/slide3.webp"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
+                                <div class="section-title">
+                                  <h2 class="title">
+                                    O imprescindível para o paciente!
+                                  </h2>
+                                  <p>
+                                    Nestas horas que a experiência e estrutura
+                                    faz toda diferença, é o nosso serviço que
+                                    conta com nossa equipe de prontidão, aonde
+                                    contamos com completa infraestrutura,
+                                    atendimento 24 horas, equipamentos adequados
+                                    e total expertise para solicitar remoções de
+                                    urgência, protocolos clínicos e equipe
+                                    especializada no atendimento a casos
+                                    clínicos complexos. Não importando idade,
+                                    doença ou atual estado clínico do paciente,
+                                    prioridade total quando acionados.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="rbt-separator-mid">
+            <div class="container"><hr class="rbt-separator m-0" /></div>
+          </div>
+          <div class="rbt-separator-mid">
+            <div class="container"><hr class="rbt-separator m-0" /></div>
+          </div>
+          <div class="rainbow-about-area rainbow-section-gap">
+            <div class="container">
+              <div class="row row--30">
+                <div class="col-lg-5">
+                  <div
+                    class="thumbnail"
+                    data-sal="slide-right"
+                    data-sal-duration="700"
+                  >
+                    <img
+                      class="w-100"
+                      src="images/Enfermeira-com-duvida.webp"
+                      alt="About Images"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="col-lg-7 mt_md--40 mt_sm--40"
+                  data-sal="slide-left"
+                  data-sal-duration="700"
+                >
+                  <div class="content">
+                    <div class="section-title">
+                      <h4 class="subtitle">
+                        <span class="theme-gradient">Tire suas Dúvidas</span>
+                      </h4>
+                      <h2 class="title mb--40">
+                        Perguntas <span class="text-cor1">Frequentes</span>
+                      </h2>
+                    </div>
+                    <div class="rainbow-accordion-style accordion">
+                      <div class="accordion" id="accordionExamplea">
+                        <div class="accordion-item card">
+                          <h2
+                            class="accordion-header card-header"
+                            id="headingOne"
+                          >
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              O que seria uma Home Care?
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExamplea"
+                          >
+                            <div class="accordion-body card-body">
+                              Home Care é o nome popular para o segmento de
+                              Atenção Domiciliar (AD), ou seja, todo tipo de
+                              serviço de saúde prestado no domicílio do
+                              paciente. Os atendimentos são prestados por uma
+                              equipe multiprofissional e podem ser procedimentos
+                              mais simples ou até os mais complexos, realizados
+                              em substituição ou em continuidade ao atendimento
+                              hospitalar.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item card">
+                          <h2
+                            class="accordion-header card-header"
+                            id="headingTwo"
+                          >
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              Quem define como será o tratamento do paciente?
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExamplea"
+                          >
+                            <div class="accordion-body card-body">
+                              Após uma avaliação realizada por nosso enfermeiro,
+                              definimos o Plano de Atenção Domiciliar (PAD)
+                              baseado nos critérios e processos clínicos da
+                              assistência. No PAD, estabelecemos os
+                              profissionais que irão atender o paciente, a
+                              frequência de atendimentos, assim como a
+                              prescrição de medicamentos, materiais e
+                              equipamentos.Se o paciente estiver saindo do
+                              hospital iremos seguir a conduta adotada no
+                              hospital para a melhora do paciente.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item card">
+                          <h2
+                            class="accordion-header card-header"
+                            id="headingThree"
+                          >
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                            >
+                              Só quem tem plano de saúde, pode ter um Home Care?
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExamplea"
+                          >
+                            <div class="accordion-body card-body">
+                              Não, por mais que 90% dos pacientes venham dos
+                              planos de saúde, também fazemos o atendimento
+                              particular, entre em contato conosco solicitando
+                              uma avaliação, iremos ao local designado para
+                              verificar se o paciente preenche os requisitos de
+                              elegibilidade para a Atenção Domiciliar.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item card">
+                          <h2
+                            class="accordion-header card-header"
+                            id="headingFour"
+                          >
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFour"
+                              aria-expanded="false"
+                              aria-controls="collapseFour"
+                            >
+                              Como é feita a seleção dos profissionais?
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExamplea"
+                          >
+                            <div class="accordion-body card-body">
+                              Um de nossos enfermeiros especializados, irá ao
+                              hospital fazer a avaliação do paciente e ver o que
+                              o mesmo precisa, com isso haverá todo um processo
+                              para delegar o profissional mais proximo e
+                              gabaritado para o suporte. Todos os profissionais
+                              que trabalham conosco tem o Registro no COREN
+                              ativo
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rbt-separator-mid">
+            <div class="container"><hr class="rbt-separator m-0" /></div>
+          </div>
+          <div class="rainbow-contact-area rainbow-section-gap" id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 mb--40">
+                  <div
+                    class="section-title text-center"
+                    data-sal="slide-up"
+                    data-sal-duration="700"
+                    data-sal-delay="100"
+                  >
+                    <h2 class="title w-600 mb--20">
+                      Nos contate
+                      <span class="text-cor1">em algum de nossos canais</span>
+                    </h2>
+                    <p class="description b1">
+                      Obtenha maiores informações sobre nossos serviços e
+                      soluções para área da saúde.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row row--15">
+                <div class="col-lg-12">
+                  <div class="rainbow-contact-address mt_dec--30">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6 col-12">
+                        <div class="rainbow-address">
+                          <div class="icon">
+                            <i class="feather-headphones"></i>
+                          </div>
+                          <div class="inner">
+                            <h4 class="title">Nosso Telefone</h4>
+                            <p><a href="#">4000-2660</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-12">
+                        <div class="rainbow-address">
+                          <div class="icon"><i class="feather-mail"></i></div>
+                          <div class="inner">
+                            <h4 class="title">Nosso Email</h4>
+                            <p>
+                              <a href="mailto:contato@gohomecare.com.br"
+                                >contato@gohomecare.com.br</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-12">
+                        <div class="rainbow-address">
+                          <div class="icon">
+                            <i class="feather-map-pin"></i>
+                          </div>
+                          <div class="inner">
+                            <h4 class="title">Nossa Localização</h4>
+                            <p>
+                              Av Senador Feijó, 686 Conj.1518<br />Vila Matias -
+                              Santos/SP
+                            </p>
+                            <br />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rainbow-address">
+                        <div class="inner">
+                          <div class="google-map-style-1">
+                            <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.933137011181!2d-46.32743089747914!3d-23.95218953226978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03745d931789%3A0xe39d01e5e54271ad!2sAv.%20Senador%20Feij%C3%B3%2C%20686%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-504!5e0!3m2!1spt-PT!2sbr!4v1713924403239!5m2!1spt-PT!2sbr"
+                              width="400"
+                              height="300"
+                              style="border: 0"
+                              allowfullscreen
+                              loading="lazy"
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="rainbow-footer footer-style-default footer-style-1">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="rainbow-footer-widget">
+                      <div class="logo">
+                        <a href="index.html"
+                          ><img
+                            class="logo-light"
+                            src="images/logo.png"
+                            alt="Corporate Logo" />
+                          <img
+                            class="logo-dark"
+                            src="images/logo-dark.png"
+                            alt="Corporate Logo"
+                        /></a>
+                      </div>
+                      <h3 class="text-big">
+                        Não cuidamos por cuidar, cuidamos por que amamos o que
+                        fazemos.
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="rainbow-footer-widget">
+                      <div class="widget-menu-top">
+                        <h4 class="title">Institucional</h4>
+                        <div class="inner">
+                          <ul class="footer-link link-hover">
+                            <li class="current"><a href="#home">Inicío</a></li>
+                            <li><a href="#service">Serviços</a></li>
+                            <li><a href="#about">Quem Somos</a></li>
+                            <li><a href="#pad">Nosso PAD</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="rainbow-footer-widget">
+                      <div class="widget-menu-bottom">
+                        <h4 class="title">Termos & Politíca</h4>
+                        <div class="inner">
+                          <ul class="footer-link link-hover">
+                            <li class="current">
+                              <a href="termos-privacidade.html"
+                                >Termos e condições</a
+                              >
+                            </li>
+                            <li>
+                              <a href="termos-privacidade.html"
+                                >Politíca de privacidade</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <div class="copyright-area copyright-style-one">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="social-icon-wrapper">
+                  <ul class="social-icon social-default icon-naked">
                     <li>
                       <a
-                        href="javascript: void(0);"
-                        data-theme="light"
-                        class="setColor light"
-                      >
-                        <img
-                          class="sun-image"
-                          src="images/sun-01.svg"
-                          alt="Sun images"
-                        />
-                      </a>
+                        href="https://www.facebook.com/gohomecaresaude/"
+                        target="_blank"
+                        title="Facebook"
+                        ><i class="feather-facebook"></i
+                      ></a>
                     </li>
                     <li>
                       <a
-                        href="javascript: void(0);"
-                        data-theme="dark"
-                        class="setColor dark"
-                      >
-                        <img
-                          class="Victor Image"
-                          src="images/vector.svg"
-                          alt="Vector Images"
-                        />
-                      </a>
+                        href="https://www.instagram.com/gohomecaresaude/"
+                        target="_blank"
+                        title="Instagram"
+                        ><i class="feather-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/gohomecaresaude/"
+                        target="_blank"
+                        title="Linkedin"
+                        ><i class="feather-linkedin"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
-                <!-- Start Switcher Area  -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- End Header Area  -->
-      <div class="popup-mobile-menu">
-        <div class="inner">
-          <div class="header-top">
-            <div class="logo">
-              <a href="index.html">
-                <img
-                  class="logo-light"
-                  src="images/logo.png"
-                  alt="Corporate Logo"
-                />
-                <img
-                  class="logo-dark"
-                  src="images/logo-dark.png"
-                  alt="Corporate Logo"
-                />
-              </a>
-            </div>
-            <div class="close-menu">
-              <button class="close-button">
-                <i class="feather-x"></i>
-              </button>
-            </div>
-          </div>
-          <ul class="mainmenu onepagenav">
-            <li class="current"><a href="#home">Inicío</a></li>
-            <li><a href="#service">Serviços</a></li>
-            <li><a href="#about">Quem Somos</a></li>
-            <li><a href="#pad">Nosso PAD</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Start Theme Style  -->
-      <div>
-        <div class="rainbow-gradient-circle"></div>
-        <div class="rainbow-gradient-circle theme-pink"></div>
-      </div>
-      <!-- End Theme Style  -->
-
-      <!-- Start Seperator Area  -->
-      <div class="rbt-separator-mid">
-        <div class="container">
-          <hr class="rbt-separator m-0" />
-        </div>
-      </div>
-      <!-- End Seperator Area  -->
-
-      <!-- Start Slider Area  -->
-      <div
-        class="slider-area slider-style-1 variation-default bg_image bg_image--23 height-950 d-flex align-items-center"
-        id="home"
-        data-black-overlay="7"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12">
-              <div class="inner text-center">
-                <h1 class="title display-one">
-                  Somos Experts em <br />
-                  <div><!--div criado apenas para ocupação de espaço--></div>
-                  <span class="header-caption">
-                    <span class="cd-headline clip is-full-width">
-                      <span class="cd-words-wrapper">
-                        <b class="is-visible theme-gradient"
-                          >Internação Domiciliar</b
-                        >
-                        <b class="is-hidden theme-gradient"
-                          >Assistência  Domiciliar</b
-                        >
-                        <b class="is-hidden theme-gradient"
-                          >Emergências Médicas</b
-                        >
-                      </span>
-                    </span>
-                  </span>
-                </h1>
-                <p class="description">
-                  Fazemos a transição Hospital/Casa de pacientes afim dos mesmos finalizarem seus tratamentos de saúde no conforto e segurança de sua residência.
-                </p>
-                <div class="button-group mt--30">
-                  <a
-                    class="btn-default round btn-large"
-                    href="#pad"
-                    >Saiba Mais Agora</a
-                  >
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Slider Area  -->
-
-      <!-- Start Service-5 Area  -->
-      <div id="service" class="rainbow-service-area rainbow-section-gap" >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div
-                class="section-title text-center"
-                data-sal="slide-up"
-                data-sal-duration="700"
-                data-sal-delay="100"
-              >
-                <h2 class="title w-600 mb--20">Veja alguns de nossos <span class="text-cor1">Serviços.</span></h2>
-                <p class="description b1">
-                  Adequamos nossos serviços de acordo com a necessidade de cada paciente.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row g-5">
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/exames-icone.png" title="Exame em Domicílio">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Exame em Domicílio</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Oferecemos uma maior comodidade e conforto na realização de exames em domicílio. Nós vamos até a residência ou lugar combinado e efetuamos Eletrocardiograma, Raio-X Digital, entre outros.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/tecnico-enf-icone.png" title="Técnico em Enfermagem">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Técnico em Enfermagem</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Profissionais indicados para pacientes de média gravidade que necessitam de cuidados especiais e procedimentos médicos de baixa complexidade.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/medico-icone.png" title="Suporte Médico">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Suporte Médico</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Consultas médicas domiciliares personalizadas, com profissionais generalistas que possuem especialização em Clínica Geral ou em Saúde da Família, e que atuam com qualquer tipo de idade e doença.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/enfermeiro-icone.png" title="Enfermeiro">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Enfermeiro</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Profissional que efetua a supervisão de equipe ou de realização de procedimentos de maior complexidade. Fundamental na recuperação do paciente, pois é o enfermeiro que direciona a equipe, organiza estoque leito e acompanha diariamente caso a caso.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/fisioterapia-icone.png" title="Fisioterapeuta">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Fisioterapeuta</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Muito solicitado para diagnosticos, previne e trata os distúrbios da cinesia humana decorrentes de alterações de órgãos e sistemas humanos: Disfunções do sistema motor, nervoso, cardíaco e respiratório, efetua diversos procedimentos na residência do paciente.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <img src="images/nutri-icone.png" title="Nutricionista">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Nutricionista</a></h4>
-                        <p class="description b1 color-gray mb--0">
-                          Sempre bem vindo nas residências, avalia a condição nutricional e ainda, orienta a forma correta de higienizar e preparar os alimentos para manter os nutrientes. Também elabora cardápios balanceados que atendam as necessidades específicas para a reabilitação e saúde do paciente, além de indicação da melhor dieta enterral.
-                        </p>
-                      </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <i class="feather-refresh-cw"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Ciclo Vitorioso</a></h4>
-                        <p class="description b1 color-gray mb--0">A "engrenagem" sempre em movimento, focamos na educação continuada de nossos colaboradores.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                      <i class="feather-lock"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Segurança Garantida</a></h4>
-                        <p class="description b1 color-gray mb--0">Asseguramos um atendimento ininterrupto enquanto paciente sobre nossos cuidados.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 bg-color-blackest radius text-center rbt-border">
-                    <div class="icon">
-                        <i class="feather-more-horizontal"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">E muito mais</a></h4>
-                        <p class="description b1 color-gray mb--0">Accesso a tudo que a empresa tem a oferecer.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-        </div>
-        </div>
-      </div>
-      <!-- Start Service-5 Area  -->
-
-      <!-- Start Seperator Area  -->
-      <div class="rbt-separator-mid">
-        <div class="container">
-          <hr class="rbt-separator m-0" />
-        </div>
-      </div>
-      <!-- End Seperator Area  -->
-
-      <!-- Start Split Style-1 Area  -->
-      <div class="rainbow-split-area">
-        <div class="wrapper">
-            <div class="rainbow-splite-style">
-                <div class="split-wrapper">
-                    <div class="row g-0 radius-10 align-items-center">
-                        <div class="col-lg-12 col-xl-6 col-12 order-xl-2">
-                            <div class="thumbnail">
-                                <img class="w-100" src="images/importancia-gohome.webp" alt="split Images">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-xl-6 col-12 order-xl-1">
-                            <div class="split-inner">
-                                <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                                    Dê o suporte correto que <span class="text-cor1">seu familiar merece!</span> </h4>
-                                <ul class="split-list" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                                    <li>- Atendimento Emergêncial 24 horas/dia;</li>
-                                    <li>- Plantão Técnico 24 horas/dia;</li>
-                                    <li>- Suporte Médico 24 horas/dia;</li>
-                                    <li>- Gerenciamento de Escala 24 horas/dia;</li>
-                                    <li>- Tipos de Desospitalizações Diversas;</li>
-                                    <li>- Cuidados Paliativos;</li>
-                                    <li>- Atendimento Pré-Hospitalar;</li>
-                                    <li>- Setor de Avaliações / Captações;</li>
-                                    <li>- Marcação / Encmaminhamento de Exames;</li>
-                                    <li>- Farmácia / Dispensário;</li>
-                                    <li>- Coleta de Lixo Domiciliar;</li>
-                                    <li>- Setor de Avaliações / Captações;</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Split Style-1 Area  -->
-
-          <!-- Start Seperator Area  -->
-          <div class="rbt-separator-mid">
-            <div class="container">
-              <hr class="rbt-separator m-0" />
-            </div>
-          </div>
-          <!-- End Seperator Area  -->
-
-        <!-- Start Split Style-1 Area  -->
-        <div class="rainbow-split-area">
-          <div class="wrapper">
-              <div class="rainbow-splite-style">
-                  <div class="split-wrapper">
-                      <div class="row g-0 radius-10 align-items-center">
-                          <div class="col-lg-12 col-xl-6 col-12">
-                              <div class="thumbnail">
-                                  <img class="w-100 roda-mundo" src="images/mundo-girando.png" alt="split Images">
-                              </div>
-                          </div>
-                          <div class="col-lg-12 col-xl-6 col-12">
-                              <div class="split-inner">
-                                  <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                                    A <span class="text-cor1">Go Home</span> vai até você!</h4>
-                                <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Atualmente, no mundo todo, a desospitalização, ou seja, receber alta hospitalar, não é uma opção, mas sim uma necessidade para liberação de leitos para casos graves na rede de saúde, nestas horas que somos requisitados para tratarmos sobre tal ação, para casos que sejam pertinentes haver o cuidado domiciliar.<br><br>
-                                  Nossa empresa atende em toda a Baixada Santista além, de todo Litoral (Sul e Norte), São Paulo capital e o ABC. Temos um emaranhado de profissionais aptos a lidar com todo tipo de atendimento e com isto efetuar uma desospitalização com eficiência e dedicação.
-                                  <br><br>
-                                  Garantimos um serviço de qualidade e humanizado, priorizando o estabelecimento de relações cordiais e benéficas entre todos os envolvidos no processo de atenção domiciliar para haver um processo de desospitalização seguro e tranquilo.
-                                  <div class="view-more-button mt--35" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
-                                      <a class="btn-default" href="#contact">Nos Contate</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                  <div class="copyright-left">
+                    <p class="copyright-text">
+                      © Go Home 2024.<br />Direitos Reservados
+                    </p>
                   </div>
-              </div>
-          </div>
-      </div>
-      <!-- End Split Style-1 Area  -->
-
-      <!-- Start Split Style-4 Area  -->
-      <div class="rainbow-split-area">
-          <div class="wrapper">
-              <div class="rainbow-splite-style bg-color-blackest">
-                  <div id="about" class="split-wrapper">
-                      <div class="row g-0 radius-10 align-items-center">
-                          <div class="col-lg-12 col-xl-6 col-12 order-2 order-lg-1">
-                              <div class="split-inner">
-                                  <h4 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
-                                    <span class="text-cor1">Sempre prontos</span> para cuidar de quem mais precisa!</h4>
-                                  <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                                    Nascemos da ideia de criação de um atendimento e forma de trabalho que rompessem a barreira da mera assistência convencional, com corpo de diretores da empresa formado por profissionais experientes – alguns, com mais de 15 anos de experiência em home care. Valorizamos a transparência, honestidade e trabalho em equipe, comunicação aberta, o que nos permite construir relacionamentos duradouros.<br><br>
-                                    O principal objetivo da GO HOME é garantir aos clientes e seus beneficiários um serviço de qualidade e humanizado, priorizando uma relação tranquila e benéfica a todas as partes envolvidas, sem deixar de lado a participação e envolvimento dos familiares no processo de atenção domiciliar.
-                                  </p>
-
-                                  <div class="row">
-                                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                          <div class="count-box counter-style-4 text-left">
-                                              <div>
-                                                  <div class="count-number"><span class="counter">300</span></div>
-                                              </div>
-                                              <h5 class="counter-title">Pacientes já Atendidos.</h5>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                          <div class="count-box counter-style-4 text-left">
-                                              <div>
-                                                  <div class="count-number"><span class="counter">200</span></div>
-                                              </div>
-                                              <h5 class="counter-title">Colaboradores Atuando Diariamente.</h5>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                          <div class="count-box counter-style-4 text-left">
-                                              <div>
-                                                  <div class="count-number"><span class="counter">100</span></div>
-                                              </div>
-                                              <h5 class="counter-title">Procedimentos Diários.</h5>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                          <div class="count-box counter-style-4 text-left">
-                                              <div>
-                                                  <div class="count-number"><span class="counter">15</span></div>
-                                              </div>
-                                              <h5 class="counter-title">Anos de Experiência da Diretoria.</h5>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-lg-12 col-xl-6 col-12 order-1 order-lg-2">
-                              <div class="thumbnail">
-                                <div class="video-btn">
-                                  <div class="video-popup icon-center">
-                                      <div class="overlay-content">
-                                          <div class="thumbnail"><img class="radius-small" src="images/sobre-cuidados.webp" alt="Corporate Image"></div>
-                                          <div class="video-icon">
-                                              <a class="btn-default rounded-player popup-video" href="video/video-institucional.mp4">
-                                                  <span><i class='bx bx-play bx-burst' ></i></span>
-                                              </a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="video-lightbox-wrapper"></div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- End Split Style-4 Area  -->
-
-      <!-- Start Seperator Area  -->
-      <div class="rbt-separator-mid">
-        <div class="container">
-          <hr class="rbt-separator m-0" />
-        </div>
-      </div>
-      <!-- End Seperator Area  -->
-
-<!-- Start Timeline-Style-Four  -->
-<div class="rainbow-timeline-area rainbow-section-gap">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                  <h4 class="subtitle "><span class="theme-gradient">Nossos Valores</span></h4>
-                  <h2 class="title w-600 mb--20">O que pensamos sobre Home Care</h2>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-lg-10 offset-lg-1 mt--50">
-              <div class="timeline-style-two bg-color-blackest">
-                  <div class="row row--0">
-                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
-                          <div class="rainbow-timeline">
-                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Missão</h6>
-                              <div class="progress-line">
-                                  <div class="line-inner"></div>
-                              </div>
-                              <div class="progress-dot">
-                                  <div class="dot-level">
-                                      <div class="dot-inner"></div>
-                                  </div>
-                              </div>
-                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Oferecer um atendimento de excelência aos seus pacientes, aliado uma boa gestão de recursos empregados, criando confiabildiade em seus clientes.</p>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
-                          <div class="rainbow-timeline">
-                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Visão</h6>
-                              <div class="progress-line">
-                                  <div class="line-inner"></div>
-                              </div>
-                              <div class="progress-dot">
-                                  <div class="dot-level">
-                                      <div class="dot-inner"></div>
-                                  </div>
-                              </div>
-                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Consolidar-se como uma empresa de confiança e de referência em qualidade
-                                de nossas especialidades no segmento de home care.</p>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
-                          <div class="rainbow-timeline">
-                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Atuação</h6>
-                              <div class="progress-line">
-                                  <div class="line-inner"></div>
-                              </div>
-                              <div class="progress-dot">
-                                  <div class="dot-level">
-                                      <div class="dot-inner"></div>
-                                  </div>
-                              </div>
-                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Atuar de forma ética e transparente, respeitando a individualidade de cada paciente e familiares, garantindo assim a qualidade dos serviços prestados.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-3 rainbow-timeline-single no-gradient">
-                          <div class="rainbow-timeline">
-                              <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">Valores</h6>
-                              <div class="progress-line">
-                                  <div class="line-inner"></div>
-                              </div>
-                              <div class="progress-dot">
-                                  <div class="dot-level">
-                                      <div class="dot-inner"></div>
-                                  </div>
-                              </div>
-                              <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Segurança do paciente<br>
-                              Humanização do atendimento<br>
-                              Respeito aos clientes<br>
-                              Valorização dos colaboradores<br>
-                              Educação continuada<br>
-                              Vigilância as boas práticas<br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Timeline-Style-Four  -->
-
-      <!-- Start Seperator Area  -->
-      <div class="rbt-separator-mid">
-        <div class="container">
-          <hr class="rbt-separator m-0" />
-        </div>
-      </div>
-      <!-- End Seperator Area  -->
-
-              <!-- Start tab Style Four  -->
-              <div class="rainbow-tab-area rainbow-section-gap">
-                <div class="container">
-                    <div class="row mb--40">
-                        <div class="col-lg-12">
-                            <div id="pad" class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                                <h4 class="subtitle">
-                                    <span class="theme-gradient">Os Pilares de um PAD</span>
-                                </h4>
-                                <h2 class="title w-600 mb--20">PAD (Programa de Atenção Domiciliar)</h2>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Style das Tabs -->
-                    <style>
-                      /* CSS para mudar a cor do texto do H5 quando a tab está ativa */
-                      #nav-tab1.nav-item.nav-link.active h5 {
-                        color: #56b847;
-                      }
-                      #nav-tab2.nav-item.nav-link.active h5 {
-                        color: #56b847;
-                      }
-                      #nav-tab3.nav-item.nav-link.active h5 {
-                        color: #56b847;
-                      }
-                      </style>
-                    <section class="position-relative overflow-hidden">
-                      <div class="container z-index-1">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <div class="tab style-2">
-                              <!-- Nav tabs -->
-                              <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                  <a class="nav-item nav-link active" id="nav-tab1" data-bs-toggle="tab" href="#tab1-1" role="tab" aria-selected="true"><h5>Internação Domiciliar</h5>
-                                  </a> <a class="nav-item nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab1-2" role="tab" aria-selected="false"><h5>Assistência Domiciliar</h5></a>
-                                  <a class="nav-item nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab1-3" role="tab" aria-selected="false"><h5>Emergências Médicas</h5></a>
-                                </div>
-                              </nav>
-                              <!-- Tab panes -->
-                              <div class="tab-content" id="nav-tabContent">
-                                <div role="tabpanel" class="tab-pane fade show active" id="tab1-1">
-                                  <div class="row align-items-center">
-                                    <div class="col-lg-6 col-md-12">
-                                      <img src="images/slide1.webp" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
-                                      <div class="section-title">
-                                        <h2 class="title">Veja como tudo funciona.</h2>
-                                        <p>BAIXA COMPLEXIDADE – Até 06 horas;<br>
-                                          MÉDIA COMPLEXIDADE – Até 12 horas;<br>
-                                          ALTA COMPLEXIDADE – Até 24 horas;<br>
-                                          VENTILAÇÃO MECÂNICA.</p>
-                                        <p>Este é o serviço voltado para pacientes com quadros clínicos complexos
-                                        e necessidade de vigilância e intervenções diárias, mas que
-                                        não precisam de toda a estrutura hospitalar para seu
-                                        tratamento. Nessa modalidade, levamos toda nossa assistência e
-                                        mobilizamos uma "base de operações" na residência para atender
-                                        as necessidades clínicas do paciente, isso faz com que o mesmo
-                                        tenha total condições de melhoria, visando a qualidade de vida
-                                      e controle de sintomas.</p>
-                                        
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="tab1-2">
-                                  <div class="row align-items-center">
-                                    <div class="col-lg-6 col-md-12">
-                                      <img class="img-fluid" src="images/slide2.webp" alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
-                                      <div class="section-title">
-                                        <h2 class="title">Assitência na Prática.</h2>
-                                        <p>Realização de Curativos;<br>
-                                          Antibioticoterapia domiciliar;<br>
-                                          Procedimentos especiais;<br>
-                                          Atendimento multidisciplinar;<br>
-                                          Monitoramento do paciente;<br>
-                                          Cuidados paliativos<br>
-                                          Oxigenioterapia.</p>
-                                        <p>Nossa equipe de assistência fará um avaliação do paciente e o
-                                          ambiente ao qual o mesmo vive, para solicitar e entrar com
-                                          diversos recursos como equipamentos, materiais, medicamentos e
-                                          equipe multiprofissional capacitada, para atender as
-                                          necessidades clínicas deste paciente. Dentre isso ainda haverá
-                                          modalidades de assistência que se assemelham às consultas e
-                                          procedimentos realizados em ambulatórios. Isto tudo visando o curto, médio e longo prazo para uma melhoria continuada do paciente.</p>
-                                          
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="tab1-3">
-                                  <div class="row align-items-center">
-                                    <div class="col-lg-6 col-md-12">
-                                      <img class="img-fluid" src="images/slide3.webp" alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
-                                      <div class="section-title">
-                                        <h2 class="title">O imprescindível para o paciente!</h2>
-                                        <p>Nestas horas que a experiência e estrutura faz toda diferença, é o nosso serviço que conta com nossa equipe de prontidão, aonde contamos com completa infraestrutura, atendimento 24 horas,
-                                          equipamentos adequados e total expertise para solicitar
-                                          remoções de urgência, protocolos clínicos e equipe
-                                          especializada no atendimento a casos clínicos complexos. Não
-                                          importando idade, doença ou atual estado clínico do paciente,
-                                          prioridade total quando acionados.</p>
-                                          
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
                 </div>
-            </div>
-            <!-- End tab Style Four  -->
-
-            <!-- Start Seperator Area  -->
-            <div class="rbt-separator-mid">
-              <div class="container">
-                <hr class="rbt-separator m-0" />
-              </div>
-            </div>
-            <!-- End Seperator Area  -->
-
-                      <!-- Start Seperator Area  -->
-                      <div class="rbt-separator-mid">
-                        <div class="container">
-                          <hr class="rbt-separator m-0" />
-                        </div>
-                      </div>
-                      <!-- End Seperator Area  -->
-
-      <!-- Start About Area  -->
-      <div class="rainbow-about-area rainbow-section-gap">
-        <div class="container">
-            <div class="row row--30">
-                <div class="col-lg-5">
-                    <div class="thumbnail" data-sal="slide-right" data-sal-duration="700">
-                        <img class="w-100" src="images/Enfermeira-com-duvida.webp" alt="About Images">
-                    </div>
-                </div>
-                <div class="col-lg-7 mt_md--40 mt_sm--40" data-sal="slide-left" data-sal-duration="700">
-                    <div class="content">
-                        <div class="section-title">
-                            <h4 class="subtitle "><span class="theme-gradient">Tire suas Dúvidas
-                            </span></h4>
-                            <h2 class="title mb--40">Perguntas <span class="text-cor1">Frequentes</span></h2>
-                        </div>
-                        <div class="rainbow-accordion-style  accordion">
-                            <div class="accordion" id="accordionExamplea">
-                                <div class="accordion-item card">
-                                    <h2 class="accordion-header card-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          O que seria uma Home Care?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                          Home Care é o nome popular para o segmento de Atenção Domiciliar (AD), ou seja, todo tipo de serviço de saúde prestado no domicílio do paciente. Os atendimentos são prestados por uma equipe multiprofissional e podem ser procedimentos mais simples ou até os mais complexos, realizados em substituição ou em continuidade ao atendimento hospitalar.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card">
-                                    <h2 class="accordion-header card-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          Quem define como será o tratamento do paciente?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                          Após uma avaliação realizada por nosso enfermeiro, definimos o Plano de Atenção Domiciliar (PAD) baseado nos critérios e processos clínicos da assistência. No PAD, estabelecemos os profissionais que irão atender o paciente, a frequência de atendimentos, assim como a prescrição de medicamentos, materiais e equipamentos.Se o paciente estiver saindo do hospital iremos seguir a conduta adotada no hospital para a melhora do paciente.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card">
-                                    <h2 class="accordion-header card-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                          Só quem tem plano de saúde, pode ter um Home Care?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                          Não, por mais que 90% dos pacientes venham dos planos de saúde, também fazemos o atendimento particular, entre em contato conosco solicitando uma avaliação, iremos ao local designado para verificar se o paciente preenche os requisitos de elegibilidade para a Atenção Domiciliar.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card">
-                                    <h2 class="accordion-header card-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                          Como é feita a seleção dos profissionais?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                          Um de nossos enfermeiros especializados, irá ao hospital fazer a avaliação do paciente e ver o que o mesmo precisa, com isso haverá todo um processo para delegar o profissional mais proximo e gabaritado para o suporte. Todos os profissionais que trabalham conosco tem o Registro no COREN ativo
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Area  -->
-
-      <!-- Start Seperator Area  -->
-      <div class="rbt-separator-mid">
-        <div class="container">
-          <hr class="rbt-separator m-0" />
-        </div>
-      </div>
-      <!-- End Seperator Area  -->
-      <div class="rainbow-contact-area rainbow-section-gap" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 mb--40">
-              <div
-                class="section-title text-center"
-                data-sal="slide-up"
-                data-sal-duration="700"
-                data-sal-delay="100"
-              >
-                <h2 class="title w-600 mb--20">Nos contate <span class="text-cor1">em algum de nossos canais</span></h2>
-                <p class="description b1">
-                  Obtenha maiores informações sobre nossos serviços e soluções para área da saúde.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row row--15">
-            <div class="col-lg-12">
-              <div class="rainbow-contact-address mt_dec--30">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-12">
-                    <div class="rainbow-address">
-                      <div class="icon">
-                        <i class="feather-headphones"></i>
-                      </div>
-                      <div class="inner">
-                        <h4 class="title">Nosso Telefone</h4>
-                        <p><a href="#">4000-2660</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-12">
-                    <div class="rainbow-address">
-                      <div class="icon">
-                        <i class="feather-mail"></i>
-                      </div>
-                      <div class="inner">
-                        <h4 class="title">Nosso Email</h4>
-                        <p>
-                          <a href="mailto:contato@gohomecare.com.br"
-                            >contato@gohomecare.com.br</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-12">
-                    <div class="rainbow-address">
-                      <div class="icon">
-                        <i class="feather-map-pin"></i>
-                      </div>
-                      <div class="inner">
-                        <h4 class="title">Nossa Localização</h4>
-                        <p>
-                          Av Senador Feijó, 686 Conj.1518 <br />
-                          Vila Matias - Santos/SP
-                        </p>
-                        <br>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="rainbow-address">
-                    <div class="inner">
-                      <div class="google-map-style-1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14584.933137011181!2d-46.32743089747914!3d-23.95218953226978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03745d931789%3A0xe39d01e5e54271ad!2sAv.%20Senador%20Feij%C3%B3%2C%20686%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-504!5e0!3m2!1spt-PT!2sbr!4v1713924403239!5m2!1spt-PT!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                      </div>
-                    </div>
+                <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                  <div class="copyright-right text-center text-lg-end">
+                    <p class="copyright-text">
+                      Desenvolvimento
+                      <a href="https://marcosds.tech" target="_blank"
+                        ><i class="bx bxl-medium bx-fade-up"></i>DS Tech</a
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <script
+            src="https://formspree.io/js/formbutton-v1.min.js"
+            defer
+          ></script>
+          <script>
+            (window.formbutton =
+              window.formbutton ||
+              function () {
+                (formbutton.q = formbutton.q || []).push(arguments);
+              }),
+              formbutton("create", {
+                action: "https://formspree.io/f/xzbnopwj",
+                title: "Deixe seu comentário ou agende uma visita!",
+                fields: [
+                  { type: "text", label: "Nome:", name: "name" },
+                  { type: "email", label: "Email:", name: "email" },
+                  { type: "text", label: "Celular:", name: "phone" },
+                  { type: "textarea", label: "Mensagem:", name: "message" },
+                  { type: "submit", value: "Enviar" },
+                ],
+                styles: {
+                  fontFamily: "Inter",
+                  modal: {
+                    border: "1px solid #004861",
+                    boxShadow: "6px 6px 0 #004861",
+                    borderRadius: "15",
+                  },
+                  title: {
+                    padding: "24px 24px 0px 24px",
+                    background: "rgba(0,0,0,0)",
+                    color: "#56b847",
+                    fontFamily: "Inter",
+                    fontSize: "1.5em",
+                  },
+                  body: { padding: "16px 24px 24px" },
+                  field: { display: "flex" },
+                  submitField: { justifyContent: "flex-end" },
+                  input: {
+                    borderRight: "1px solid #004861",
+                    borderBottom: "1px solid #004861",
+                    borderRadius: "5px",
+                  },
+                  button: { background: "#004861", fill: "#56b847" },
+                  closeButton: { textShadow: "0 0 0 #56b847" },
+                },
+              });
+          </script>
         </div>
       </div>
-
-              <!-- Start Footer Area  -->
-              <footer class="rainbow-footer footer-style-default footer-style-1">
-                <div class="footer-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="rainbow-footer-widget">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img class="logo-light" src="images/logo.png" alt="Corporate Logo">
-                                            <img class="logo-dark" src="images/logo-dark.png" alt="Corporate Logo">
-                                        </a>
-                                    </div>
-                                    <h3 class="text-big">Não cuidamos por cuidar, cuidamos por que amamos
-                                      o que fazemos.
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                                <div class="rainbow-footer-widget">
-                                    <div class="widget-menu-top">
-                                      <h4 class="title">Institucional</h4>
-                                      <div class="inner">
-                                          <ul class="footer-link link-hover">
-                                            <li class="current"><a href="#home">Inicío</a></li>
-                                            <li><a href="#service">Serviços</a></li>
-                                            <li><a href="#about">Quem Somos</a></li>
-                                            <li><a href="#pad">Nosso PAD</a></li>
-                                          </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="rainbow-footer-widget">
-                                  <div class="widget-menu-bottom">
-                                    <h4 class="title">Termos & Politíca</h4>
-                                    <div class="inner">
-                                        <ul class="footer-link link-hover">
-                                          <li class="current"><a href="termos-privacidade.html">Termos e condições</a></li>
-                                          <li><a href="termos-privacidade.html">Politíca de privacidade</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-      <!-- Start Copy Right Area  -->
-      <div class="copyright-area copyright-style-one">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="social-icon-wrapper">
-              <ul class="social-icon social-default icon-naked">
-                  <li><a href="https://www.facebook.com/gohomecaresaude/" target="_blank" title="Facebook">
-                          <i class="feather-facebook"></i>
-                      </a>
-                  </li>
-                  <li><a href="https://www.instagram.com/gohomecaresaude/" target="_blank" title="Instagram">
-                          <i class="feather-instagram"></i>
-                      </a>
-                  </li>
-                  <li><a href="https://www.linkedin.com/company/gohomecaresaude/" target="_blank" title="Linkedin">
-                          <i class="feather-linkedin"></i>
-                      </a>
-                  </li>
-              </ul>
-          </div>
-            <div class="col-lg-6 col-md-8 col-sm-12 col-12">
-              <div class="copyright-left">
-                <p class="copyright-text">© Go Home 2024. <br>Direitos Reservados</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-4 col-sm-12 col-12">
-              <div class="copyright-right text-center text-lg-end">
-                <p class="copyright-text">Desenvolvimento <a href="https://marcosds.tech" target="_blank"> <i class='bx bxl-medium bx-fade-up' ></i>DS Tech</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Copy Right Area  -->
-      
-      <script
-      src="https://formspree.io/js/formbutton-v1.min.js"
-      defer
-    ></script>
-    <script>
-      window.formbutton =
-        window.formbutton ||
-        function () {
-          (formbutton.q = formbutton.q || []).push(arguments);
-        };
-      formbutton("create", {
-        action: "https://formspree.io/f/xzbnopwj",
-        title: "Deixe seu comentário ou agende uma visita!",
-        fields: [
-          {
-            type: "text",
-            label: "Nome:",
-            name: "name",
-          },
-          {
-            type: "email",
-            label: "Email:",
-            name: "email",
-          },
-          {
-            type: "text",
-            label: "Celular:",
-            name: "phone",
-          },
-          {
-            type: "textarea",
-            label: "Mensagem:",
-            name: "message",
-          },
-          { type: "submit", value: "Enviar" },
-        ],
-        styles: {
-          fontFamily: "Inter",
-          modal: {
-            border: "1px solid #004861",
-            boxShadow: "6px 6px 0 #004861",
-            borderRadius: "15",
-          },
-          title: {
-            padding: "24px 24px 0px 24px",
-            background: "rgba(0,0,0,0)",
-            color: "#56b847",
-            fontFamily: "Inter",
-            fontSize: "1.5em",
-          },
-          body: {
-            padding: "16px 24px 24px",
-          },
-          field: {
-            display: "flex",
-          },
-          submitField: {
-            justifyContent: "flex-end",
-          },
-          input: {
-            borderRight: "1px solid #004861",
-            borderBottom: "1px solid #004861",
-            borderRadius: "5px",
-          },
-          button: {
-            background: "#004861",
-            fill: "#56b847",
-          },
-          closeButton: {
-            textShadow: "0 0 0 #56b847",
-          },
-        },
-      });
-    </script>
     </main>
-
-    <!-- All Scripts  -->
-    <!-- Start Top To Bottom Area  -->
-    <div class="rainbow-back-top">
-      <i class="feather-arrow-up"></i>
-    </div>
-    <!-- End Top To Bottom Area  -->
-    <!-- JS
-============================================ -->
+    <div class="rainbow-back-top"><i class="feather-arrow-up"></i></div>
     <script src="js/modernizr.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1300,7 +1592,6 @@
     <script src="js/jquery.style.swicher.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/jquery-one-page-nav.js"></script>
-    <!-- Main JS -->
     <script src="js/main.js"></script>
   </body>
 </html>
